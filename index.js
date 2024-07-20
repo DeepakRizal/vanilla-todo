@@ -67,6 +67,11 @@ addToDo.addEventListener("click", function () {
   if (!todoContent) {
     return alert("please enter the todo first!");
   }
+  const noTodosMessage = todos.querySelector(".black");
+  if (noTodosMessage) {
+    noTodosMessage.remove();
+  }
+
   if (isEditMode) {
     const updatedTodos = updateTodo(editTodoId, todoContent);
 
@@ -140,8 +145,9 @@ function loadTodos() {
     if (!todosToBeDisplayed) {
       return (todos.innerHTML = `<h2 class="black">No Todos to show</h2>`);
     }
-
-    todos.insertAdjacentHTML("beforeend", todosToBeDisplayed);
+    if (todosToBeDisplayed) {
+      todos.insertAdjacentHTML("beforeend", todosToBeDisplayed);
+    }
   });
 }
 
