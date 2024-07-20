@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(36, 36, 43);
+  padding: 100px;
+  overflow: auto;
+}
+
+.todo-box {
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 20px;
+  overflow: auto;
+}
+.input-box {
+  display: flex;
+  gap: 10px;
+}
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  color: black;
+}
+
+.input-box button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.input-box button .add {
+  color: black;
+  font-size: 40px;
+}
+
+.todos {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.todos h2 {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.todo {
+  width: 100%;
+  background-color: rgb(46, 45, 45);
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  transition: ease-out;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  background-color: rgb(255, 64, 0);
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.none {
+  display: none;
+}
+
+.trash,
+.create {
+  color: black;
+  font-size: 18px;
+}
+
+.trash:hover,
+.create:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 640px) {
+  .todo-content {
+    font-size: 12px;
+    text-align: left;
+  }
+}
